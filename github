@@ -23,3 +23,7 @@ follower = user.get_followers() #following you
 #for loop to print out names of the people following me
 for follower in follower:
     print(follower.name)
+    repo = followee.get_repos()
+    #for loop that will go through each user repositories and print them out
+    for repo in repo:
+        print(repo.name)
