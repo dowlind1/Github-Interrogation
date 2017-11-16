@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Nov 16 12:42:07 2017
+
+@author: ddowl
+"""
+
+import pip
+
+package_name = "PyGithub"
+
+pip.main(['install', package_name])
+
+#Github Instance
+
+from github import Github
+
+#authentication code used to access dowlind1 github
+g = Github('fa5a233f26308dc4cc996becb68681f9a766f01a')
+user = g.get_user('dowlind1')
+follower = user.get_followers() #following you
+
+#for loop to print out names of the people following me
+for follower in follower:
+    print(follower.name)
