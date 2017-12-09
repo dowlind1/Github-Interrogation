@@ -2,10 +2,38 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Untitled 1</title>
-</head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    
+    <title>CS3012 Github API Access</title>
+
+    
+  <!-- Template taken from www.bootstrap.com -->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="https://api.github.com">Github API Access</a>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="searchContainer">
+        <h1>Search Github Users and Repos</h1>
+        <p class="lead">Enter a user login name to access their folder<br/>From here you can find their followers, who they are following and the users repositories</p>
+     	<input type="text" id="searchBox" class="form-control my-2 my-sm-0" placeholder="User login" style="width: 7cm"/>
+     	<!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Github User</button>-->
+	</div>
+	<br/>
+	<div id="profile"></div>
+    
+    </div><!-- /.container -->
 <body>
 
 </body>
