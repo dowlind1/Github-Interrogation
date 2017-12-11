@@ -27,11 +27,21 @@ $(document).ready(function(){
 					client_secret:'e79ecbcec7e674422e563fa4984c6e06cb612066',
 					sort: 'created: asc'
 				}
-				//console.log(userRepos); test it gives back the array of repos for that user
-
+			//console.log(userRepos); test it gives back the array of repos for that user
+			}).done(function(userRepos){
+				$.each(userRepos,function(index, repo){
+					$('#userRepos').append(`
+					`);
+				});
+			});
 		}
-	}
-}
+		$('#profile').html(`
+			<h3 class="page-header">Public Repositories:</h3>
+			<div id="userRepos">
+			</div>
+		`);
+	});
+});
       
       
       
