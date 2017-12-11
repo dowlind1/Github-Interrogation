@@ -36,6 +36,28 @@ $(document).ready(function(){
 			});
 		}
 		$('#profile').html(`
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+				<h3 class="panel-title">${userDetails.name}</h3>
+			  </div>
+			  <div class="panel-body">
+			    <div class="row">
+				<div class="col-md-3">
+					<img style="width:100%" class="thumbnail" src="${userDetails.avatar_url}">
+					<a class="btn btn-primary btn-block" href="${userDetails.html_url}">View Profile</a>
+				</div>
+				<div class="col-md-9">
+					<a class="btn btn-danger" href="https://github.com/${userDetails.login}?tab=repositories">Repositories(Public Only): <span class="badge" >${userDetails.public_repos}</span></a>
+					<a class="btn btn-success" href="https://github.com/${userDetails.login}?tab=followers">Followers: <span class="badge">${userDetails.followers}</span></a>    
+					<a class="btn btn-info" href="https://github.com/${userDetails.login}?tab=following">Following: <span class="badge">${userDetails.following}</span></a>
+					<br><br>
+					<ul class="list-group">
+						<li class="list-group-item">Bio: ${userDetails.bio}</li>
+						<li class="list-group-item">Location: ${userDetails.location}</li>
+					</ul>
+				</div>	
+			   </div>
+			</div>
 			<h3 class="page-header">Public Repositories:</h3>
 			<div id="userRepos">
 			</div>
