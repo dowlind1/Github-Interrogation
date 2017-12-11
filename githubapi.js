@@ -17,6 +17,18 @@ $(document).ready(function(){
 			}
 		}).done(function(userDetails) {//returns details, which is the user details
 			console.log(userDetails);
+			//details for each API request
+			//used to test the visualization on the screen in below
+			$.ajax({
+				url:'https://api.github.com/users/'+userLogin+'/repos',
+				
+				data:{
+					client_id:'6199e68ea54464745137',
+					client_secret:'e79ecbcec7e674422e563fa4984c6e06cb612066',
+					sort: 'created: asc'
+				}
+				//console.log(userRepos); test it gives back the array of repos for that user
+
 		}
 	}
 }
