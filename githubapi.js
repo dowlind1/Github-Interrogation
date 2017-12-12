@@ -31,6 +31,22 @@ $(document).ready(function(){
 			}).done(function(userRepos){
 				$.each(userRepos,function(index, repo){
 					$('#userRepos').append(`
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="row">
+									<ul class="list-group">
+										<div class="col-md-10">
+											<li class="list-group-item"><strong>${repo.name}</strong>: ${repo.description}
+											<li class="list-group-item">Created: ${repo.created_at}</li>
+											<li class="list-group-item">Language: ${repo.language}</li>   
+											<li class="list-group-item">Size: ${repo.size}</li>
+											<br><br>
+										</div>
+									</ul>
+								</div>
+							</div>
+						</div>
+
 					`);
 				});
 			});
