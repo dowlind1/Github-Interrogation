@@ -40,6 +40,7 @@ $(document).ready(function(){
 											<li class="list-group-item">Created: ${repo.created_at}</li>
 											<li class="list-group-item">Language: ${repo.language}</li>   
 											<li class="list-group-item">Size: ${repo.size}</li>
+											<a class="btn btn-danger" href="${repo.html_url}"><span class="badge" >Repo Page</span></a>
 											<br><br>
 										</div>
 									</ul>
