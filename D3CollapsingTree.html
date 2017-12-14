@@ -51,6 +51,31 @@ $.ajax({
 		response=text;
 	}
 });
+//testing that the code is read to this point
+alert("All good so far!");
+loginArray.push(user);
+//check that the array is functioning correctly
+alert(loginArray);
+//user is dowlind1 and calling on eljoyce which is the first user
+//set a new response object
+var follResponse=response;
+//c will count the amount of followers to go through for each user input
+var c = 1;
+//conn will be the amount of people with in the whole connection
+var conn=1;
+// children of nodes
+var main = "children";
+var cname ="children";
+//make them arrays
+treeData[main]=[];
+//the object for each follower
+var cdata ={};
+//view the object, check its progress to date - should only have the user within it
+alert(JSON.stringify(treeData));
+for(i =0;i<follResponse.length;i++){
+
+
+}
 
 // Set the dimensions and margins of the diagram
 var margin = {top: 20, right: 90, bottom: 30, left: 90},
