@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    
+    <title>CS3012 Github API Access</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Template taken from www.bootstrap.com -->
+    <link href="bootstrap.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="github_css.css"/>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Return</a>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- add followers into here-->
+		<br/>
+	<div id="profile"></div>
+    </div><!-- /.container -->
+	<script type="text/javascript" src="jquery-3.2.1.js" ></script><!-- integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"  became an issue so took it out and will need to upload a file to the macneill also-->
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+  	<script type="text/javascript" src="followings.js"></script>
+
+</body>
+
+</html>
