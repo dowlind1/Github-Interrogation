@@ -96,7 +96,16 @@
 					var count = 0;
 
 					$.each(followers,function(index, followers){
-					
+						//check if they are user followers are in the main array or the followers array
+						//if not, follow through 
+						if(loginArray.indexOf(follResponse[i].login)<0 || foll.indexOf(follResponse[i].login)<0){
+							loginArray.push(follResponse[i].login);//add to login array(keep track of who has been passed
+							cdata = { "name" : follResponse[i].login }; //create name object for user
+							cname ="children";
+							cdata[cname]=[];//create object array for each follower of the user
+							treeData[main].push(cdata);//add the follower to the tree object
+							foll.push(follResponse[i].login);//add to followers array
+						}
 					});
 				});
 			}
