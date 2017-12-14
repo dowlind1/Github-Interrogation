@@ -25,6 +25,32 @@
 <!-- load the d3.js library -->	
 <script src="d3.v4.min.js"></script>
 
+<script type="text">
+//set variable outside of AJAX
+var response ='';
+var loginArray =[];
+//this will be the search criteria that has been put in by the user
+let user = "typicode"; //using this user to test its capacity as they have many followers(more than me anyway)
+
+//start the object off with the name of the user
+//for nodes code do var tree = {}; then var node = "Node" then tree[node] =[] 
+
+var treeData = {"name": user};
+//start the first AJAX request getting the criteria from user and in an ascending order
+$.ajax({
+	type: "GET",
+    url:'https://api.github.com/users/'+user+'/followers',
+
+    data:{
+        client_id:'6199e68ea54464745137',
+        client_secret:'e79ecbcec7e674422e563fa4984c6e06cb612066',
+        sort: 'created: asc'
+    },
+	async: false,
+	success: function(text){
+		response=text;
+	}
+});
 
 // Set the dimensions and margins of the diagram
 var margin = {top: 20, right: 90, bottom: 30, left: 90},
@@ -207,4 +233,5 @@ function update(source) {
     update(d);
   }
 }
+  </script>
 </body>
