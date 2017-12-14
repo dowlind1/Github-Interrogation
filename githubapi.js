@@ -92,8 +92,9 @@ $(document).ready(function(){
 					</div>
 					<div class="col-md-9">
 						<a class="btn btn-danger" href="https://github.com/${userDetails.login}?tab=repositories">Repositories(Public Only): <span class="badge" >${userDetails.public_repos}</span></a>
-						<a class="btn btn-success" href="https://github.com/${userDetails.login}?tab=followers">Followers: <span class="badge">${userDetails.followers}</span></a>    
-						<a class="btn btn-info" href="https://github.com/${userDetails.login}?tab=following">Following: <span class="badge">${userDetails.following}</span></a>
+						<a class="btn btn-success" href="followers.html">Followers: <span class="badge">${userDetails.followers}</span></a>    
+						<a class="btn btn-info" href="following.html">Following: <span class="badge">${userDetails.following}</span></a>
+						<a class="btn btn-warning my-2 my-sm-0" href="D3CollapsingTree.html">D3 - Tree of Followers-Followers</a>
 						<br><br>
 						<ul class="list-group">
 							<li class="list-group-item">Bio: ${userDetails.bio}</li>
