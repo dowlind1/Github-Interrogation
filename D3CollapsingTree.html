@@ -106,7 +106,21 @@
 							treeData[main].push(cdata);//add the follower to the tree object
 							foll.push(follResponse[i].login);//add to followers array
 						}
+						//alert checks to test the output, done on small users like dowlind1 as tests
+						//alert(JSON.stringify(treeData) + " treeData");
+						//alert(JSON.stringify(cdata) + " cdata");
+						if(loginArray.indexOf(followers.login)<0){
+							if(follResponse[i]!=followers.login ){
+								loginArray.push(followers.login);
+								var childName = { "name": followers.login};
+								//alert(childName["name"]+" childname array");
+								cdata[cname].push(childName);
+								count++;
+							}
+						}
+						conn++;//count the connections
 					});
+					c++;//count the followers of the user
 				});
 			}
 
