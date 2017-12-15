@@ -26,7 +26,7 @@
 		<!-- load the d3.js library -->	
 		<script src="d3.v4.min.js"></script>
 
-		<script type="text">
+		<script>
 			//set variable outside of AJAX
 			var response ='';
 			var loginArray =[];
@@ -34,9 +34,9 @@
 			//let user = "typicode"; using this user to test its capacity as they have many followers(more than me anyway)
 
 			//will pass the variable through the previous html/js script for this page
-			var someVarName = localStorage.getItem("someVarName");
-			let user = someVarName;
-
+			var userVar = localStorage.getItem("userVar");
+			let user = userVar;
+			//alert(user) - test user passed through is working, null if not
 
 			//start the object off with the name of the user
 			//for nodes code do var tree = {}; then var node = "Node" then tree[node] =[] 
