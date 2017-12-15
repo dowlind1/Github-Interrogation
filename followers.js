@@ -39,7 +39,7 @@ $(document).ready(function(){
 						  	<h3 class="panel-title">${userFollower.name} - ${userFollower.login}</h3>
 						  </div>
 						  <div class="panel-body">
-						    <div class="row">
+						  <div class="row">
 						    	<div class="col-md-3">
 						    		<img style="width:100%" class="thumbnail" src="${userFollower.avatar_url}">
 						  			<a class="btn btn-primary btn-block" href="${userFollower.html_url}">View Profile</a>
@@ -54,7 +54,7 @@ $(document).ready(function(){
 							  			<li class="list-group-item">Location: ${userFollower.location}</li>
 							  		</ul>
 						  		</div>	
-						   </div>
+						 	</div>
 						</div>					
 					`);
 
@@ -62,6 +62,7 @@ $(document).ready(function(){
 			});
 		});
 		$('#profile').html(`
+			<h3 class="page-header">Followers:</h3>
 			<div id="userFollowers"></div>
 		`);
 	});
