@@ -61,7 +61,9 @@ $(document).ready(function(){
 				});
 			});
 		});
-
+		$('#profile').html(`
+			<div id="userFollowers"></div>
+		`);
 	});
 });
 
