@@ -64,6 +64,7 @@ $(document).ready(function(){
 			});
 		});
 		$('#profile').html(`
+			<h3 class="page-header">Followings:</h3>
 			<div id="userFollowings"></div>
 		`);
 	});
