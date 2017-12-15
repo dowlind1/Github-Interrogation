@@ -62,6 +62,9 @@ $(document).ready(function(){
         });
       });
     });
+    $('#profile').html(`
+		  <div id="userFollowings"></div>
+		`);
   });
 });
 
