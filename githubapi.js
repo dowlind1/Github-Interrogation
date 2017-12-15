@@ -51,34 +51,6 @@ $(document).ready(function(){
 					`);
 				});
 			});
-			$.ajax({
-				url:'https://api.github.com/users/'+userLogin+'/followers',
-
-				data:{
-					client_id:'6199e68ea54464745137',
-					client_secret:'e79ecbcec7e674422e563fa4984c6e06cb612066',
-					sort: 'created: asc'
-				}
-
-				//console.log(userRepos); test it gives back the array of repos for that user
-			}).done(function(userFollowers){
-				$.each(userFollowers,function(index, followers){
-					$('#userFollowers').append(`
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="row">
-									<ul class="list-group">
-										<div class="col-md-10">
-											<li class="list-group-item"><strong>${followers.login}</strong>
-											<br><br>
-										</div>
-									</ul>
-								</div>
-							</div>
-						</div>
-					`);
-				});
-			});
 			$('#profile').html(`
 				<div class="panel panel-default">
 				  <div class="panel-heading">
