@@ -79,7 +79,7 @@ $(document).ready(function(){
 				<div id="userRepos"></div>
 			`);
 			var userVar = userLogin;
-			localStorage.setItem("userVar",userVar):
+			localStorage.setItem("userVar",userVar);
 		});
 	});
 });
