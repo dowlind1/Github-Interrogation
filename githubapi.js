@@ -105,9 +105,9 @@ $(document).ready(function(){
 				</div>
 				<h3 class="page-header">Public Repositories:</h3>
 				<div id="userRepos"></div>
-				var userVar = userLogin;
-				localStorage.setItem("userVar",userVar):
 			`);
+			var userVar = userLogin;
+			localStorage.setItem("userVar",userVar):
 		});
 	});
 });
