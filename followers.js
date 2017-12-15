@@ -1,6 +1,7 @@
+var userVar = localStorage.getItem("userVar");
 $(document).ready(function(){
 	console.log('Connected');//sends a message on our console to let us know it is working, for testing purposes			
-	let userLogin = someVarName;
+	let userLogin = userVar;
 
 		//Use ajax to get a request from the Github API
 	$.ajax({
