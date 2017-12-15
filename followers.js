@@ -33,7 +33,31 @@ $(document).ready(function(){
 				}
 				//console.log(userRepos); test it gives back the array of repos for that user
 				}).done(function(userFollower) {
-					//in here will be the profile data and design
+					$('#userFollowers').append(`
+						  <div class="panel panel-default">
+						  <div class="panel-heading">
+						  	<h3 class="panel-title">${userFollower.name} - ${userFollower.login}</h3>
+						  </div>
+						  <div class="panel-body">
+						    <div class="row">
+						    	<div class="col-md-3">
+						    		<img style="width:100%" class="thumbnail" src="${userFollower.avatar_url}">
+						  			<a class="btn btn-primary btn-block" href="${userFollower.html_url}">View Profile</a>
+						  		</div>
+						  		<div class="col-md-9">
+							  		<a class="btn btn-danger" href="https://github.com/${userFollower.login}?tab=repositories">Repositories(Public Only): <span class="badge" >${userFollower.public_repos}</span></a>
+									<a class="btn btn-success" href="https://github.com/${userFollower.login}?tab=followers">Followers: <span class="badge">${userFollower.followers}</span></a>    
+									<a class="btn btn-info" href="https://github.com/${userFollower.login}?tab=following">Following: <span class="badge">${userFollower.following}</span></a>
+							  		<br><br>
+							  		<ul class="list-group">
+							  			<li class="list-group-item">Bio: ${userFollower.bio}</li>
+							  			<li class="list-group-item">Location: ${userFollower.location}</li>
+							  		</ul>
+						  		</div>	
+						   </div>
+						</div>					
+					`);
+
 				});
 			});
 		});
